@@ -1,0 +1,33 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azure-title: #0290ff;
+  --mid-blue-list-links: #0290ff;
+  --white: #fff;
+  --gray-item-border: #e8e8e8;
+  --gray-add-book: #888;
+  --black-two: #121212;
+  --background-color: #fafafa;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* App Container Styles */
