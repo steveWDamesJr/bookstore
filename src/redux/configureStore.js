@@ -6,11 +6,9 @@ const reducer = combineReducers({
   booksReducer,
 });
 
-const composeEnhancements = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
-
 const store = createStore(
   reducer,
-  composeEnhancements(applyMiddleware(logger)),
+  applyMiddleware(logger),
 );
 
 export default store;
