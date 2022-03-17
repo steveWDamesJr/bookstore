@@ -1,11 +1,24 @@
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 
-const BookList = () => (
-  <div>
-    <BookItem title="THE HUNGER GAMES 1" author="Suzanne Collins" />
-    <BookItem title="THE HUNGER GAMES 2" author="Suzanne Collins" />
-    <BookItem title="THE HUNGER GAMES 3" author="Suzanne Collins" />
-  </div>
-);
+const BookList = () => {
+  const bookArr = useSelector((state) => state.booksReducer);
+
+  return (
+    <ul>
+      {
+        bookArr.map((bookItem) => (
+          <BookItem
+            key={bookItem.id}
+            id={bookItem.id}
+            category={bookItem.category}
+            title={bookItem.title}
+            author={bookItem.author}
+          />
+        ))
+       }
+    </ul>
+  );
+};
 
 export default BookList;
