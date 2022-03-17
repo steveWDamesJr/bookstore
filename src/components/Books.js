@@ -1,11 +1,11 @@
 import React from 'react';
 import BookList from './BookList';
-import Form from './Form';
+import AddBook from './AddBook';
 
 const Books = () => (
   <div>
     <BookList />
-    <Form />
+    <AddBook />
   </div>
 );
 

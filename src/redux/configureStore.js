@@ -1,14 +1,16 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import createLogger from 'redux-logger';
-import todo from './modules/todo';
-
-const loggerMiddleware = createLogger();
-
-const createStoreWithMiddleware = applyMiddleware(loggerMiddleware)(createStore);
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import booksReducer from './books/books';
 
 const reducer = combineReducers({
-  todo,
+  booksReducer,
 });
 
-const configureStore = (initialState) => createStoreWithMiddleware(reducer, initialState);
-export default configureStore;
+const composeEnhancements = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
+
+const store = createStore(
+  reducer,
+  composeEnhancements(applyMiddleware(logger)),
+);
+
+export default store;

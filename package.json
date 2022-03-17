@@ -14,7 +14,9 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "reactjs-dropdown-component": "^1.2.0",
-    "redux": "^4.1.2"
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.17.7",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-syntax-jsx": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
