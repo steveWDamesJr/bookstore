@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <header className="flex justify-between items-center Navbar">
+  <header className="Navbar">
     <nav className="flex">
       <ul>
         <li>
-          <Link className="books" to="/">Bookstore CMS</Link>
+          <Link className="bookstore-cms" to="/">Bookstore CMS</Link>
         </li>
         <li>
           <Link className="books" to="/">BOOKS</Link>

@@ -1,8 +1,73 @@
 /* Books Homepage */
+
+/* Navbar */
+.Navbar {
+  margin-right: 0;
+}
+
+.form {
+  padding-left: 6.25rem;
+  min-width: 100%;
+}
+
+header {
+  padding-left: 6.25rem;
+  height: 5.938rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.7rem;
+}
+
+.bookstore-cms {
+  width: 15rem;
+  height: 2.313rem;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure-title);
+}
+
+.books {
+  width: 3.688rem;
+  height: 1rem;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.categories {
+  width: 6.563rem;
+  height: 1rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+}
+
 .books-container {
   display: grid;
   grid-template-columns: 20rem 7rem 5rem 25rem;
   align-items: center;
+  margin-top: 2.313rem;
   margin-left: auto;
   margin-right: auto;
   width: 60rem;
@@ -48,10 +113,10 @@
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  margin-bottom: 1rem;
 }
 
 .actions {
-  width: 4.563rem;
   height: 1.188rem;
   font-size: 0.875rem;
   font-weight: 300;
@@ -60,10 +125,23 @@
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 1rem;
+}
+
+.actions:last-child {
+  border: none;
+}
+
+.comments {
+  padding-right: 1rem;
 }
 
 .actions-ul {
   display: flex;
+  gap: 1.5rem;
+  margin-top: 1.313rem;
+  align-content: center;
 }
 
 .oval-2 {
@@ -147,4 +225,74 @@
   background-color: var(--azure-title);
   border-color: var(--azure-title);
   color: var(--white);
+}
+
+.add-book-title {
+  margin-top: 4.438rem;
+  margin-bottom: 1rem;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  color: var(--gray-add-book);
+}
+
+form {
+  display: flex;
+  gap: 2rem;
+}
+
+.book-title-input {
+  align-items: center;
+  width: 41.5rem;
+  height: 2.813rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+  padding-left: 1rem;
+}
+
+.book-author-input {
+  align-items: center;
+  width: 17.813rem;
+  height: 2.813rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+  padding-left: 1rem;
+}
+
+.book-title-input::placeholder,
+.book-author-input::placeholder {
+  padding-left: 1rem;
+  color: var(--pinkish-gray);
+}
+
+.book-category-select {
+  width: 17.813rem;
+  height: 2.813rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+  padding-left: 1rem;
+  color: var(--pinkish-gray);
+}
+
+.book-category-select {
+ 
+}
+
+
+.add-book-button {
+  width: 11.5rem;
+  border-radius: 3px;
+  background-color: var(--azure-title);
+  height: 2.813rem;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }

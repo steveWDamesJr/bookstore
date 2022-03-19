@@ -29,11 +29,11 @@ const BookItem = (props) => {
             <span className="author">{author}</span>
             <br />
             <ul className="actions-ul">
-              <li className="actions">Comments</li>
-              <li className="actions">
+              <li className="actions comments">Comments</li>
+              <li className="actions remove">
                 <button type="button" onClick={removeHandler}>Remove</button>
               </li>
-              <li className="actions">Edit</li>
+              <li className="actions edit">Edit</li>
             </ul>
           </div>
           <div className="c100 p34 center">
