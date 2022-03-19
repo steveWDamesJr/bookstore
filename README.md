@@ -6,7 +6,7 @@ REACT README
 
 > "The Bookstore" is a app that allows you to: display a list of books, add a book and remove a selected book. 
 
-![screenShoot Desktop]("./../images/bookstore.png")
+![screenShot Desktop]("./images/bookstore.png")
 
 
 ## Built With
