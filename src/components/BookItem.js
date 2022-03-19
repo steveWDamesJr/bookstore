@@ -1,6 +1,10 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { deleteBook } from '../redux/books/books';
+import 'react-circular-progressbar/dist/styles.css';
+
+const percentage = 60;
 
 const BookItem = (props) => {
   const dispatch = useDispatch();
@@ -29,23 +33,25 @@ const BookItem = (props) => {
             <span className="author">{author}</span>
             <br />
             <ul className="actions-ul">
-              <li className="actions">Comments</li>
-              <li className="actions">
+              <li className="actions comments">Comments</li>
+              <li className="actions remove">
                 <button type="button" onClick={removeHandler}>Remove</button>
               </li>
-              <li className="actions">Edit</li>
+              <li className="actions edit">Edit</li>
             </ul>
           </div>
           <div className="c100 p34 center">
-            <span>64%</span>
             <div className="slice">
               <div className="bar" />
               <div className="fill" />
             </div>
           </div>
-          <div className="percent-complete-container">
-            <span className="percent-complete">64%</span>
-            <span className="completed text-style-2">Completed</span>
+          <div>
+            <CircularProgressbar value={percentage} text={`${percentage}%`} />
+          </div>
+          <div className="percent-container-completed">
+            <div className="completed text-style-2">Completed</div>
+            <div className="percent-complete">64%</div>
           </div>
           <div className="chapter-progress-container">
             <span className="current-chapter">Current Chapter</span>
@@ -56,6 +62,7 @@ const BookItem = (props) => {
             >
               UPDATE PROGRESS
             </button>
+
           </div>
         </li>
       </ul>

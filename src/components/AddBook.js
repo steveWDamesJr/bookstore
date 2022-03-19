@@ -23,13 +23,15 @@ const AddBook = () => {
   };
 
   return (
-    <div>
-      <h2>ADD NEW BOOK</h2>
+    <div className="form">
+      <hr />
+      <h2 className="add-book-title">ADD NEW BOOK</h2>
 
       <form action="" onSubmit={sendBook}>
-        <input type="text" placeholder="Book Title" required onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" placeholder="Book Author" required onChange={(e) => setAuthor(e.target.value)} />
+        <input className="book-title-input" type="text" placeholder="Book Title" required onChange={(e) => setTitle(e.target.value)} />
+        <input className="book-author-input" type="text" placeholder="Book Author" required onChange={(e) => setAuthor(e.target.value)} />
         <select
+          className="book-category-select"
           name="category"
           id="category"
           required
@@ -48,7 +50,7 @@ const AddBook = () => {
             Documentary
           </option>
         </select>
-        <button type="submit">Add Book</button>
+        <button className="add-book-button" type="submit">Add Book</button>
       </form>
     </div>
   );
