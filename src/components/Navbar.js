@@ -13,6 +13,7 @@ const Navbar = () => (
         <li>
           <Link className="categories" to="/categories">CATEGORIES</Link>
         </li>
+        <li className="profile-icon">CgProfile</li>
       </ul>
     </nav>
   </header>
