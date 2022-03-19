@@ -2,19 +2,24 @@
 
 /* Navbar */
 .Navbar {
-  margin-right: 0;
+  padding-left: 13rem;
 }
 
 .profile-icon {
   width: 2.813rem;
   height: 2.813rem;
-  margin: 0 0 0 41.5rem;
+  margin-left: 41.5rem;
   padding: 0.875rem;
-  border: solid 1px var(--white);
+  border: solid 1px #0290ff;
+  border-radius: 50%;
+  color: var(--azure-title);
+}
+
+.profile-icon:hover {
+  cursor: pointer;
 }
 
 .form {
-  padding-left: 6.25rem;
   min-width: 100%;
 }
 
@@ -35,7 +40,6 @@ nav ul {
 .bookstore-cms {
   width: 15rem;
   height: 2.313rem;
-  font-family: Montserrat;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -48,7 +52,6 @@ nav ul {
 .books {
   width: 3.688rem;
   height: 1rem;
-  font-family: Montserrat;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -62,7 +65,6 @@ nav ul {
   width: 6.563rem;
   height: 1rem;
   opacity: 0.5;
-  font-family: Montserrat;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -78,7 +80,6 @@ nav ul {
   margin-top: 2.313rem;
   margin-left: auto;
   margin-right: auto;
-  width: 60rem;
   height: 10.625rem;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   border-radius: 4px;
@@ -232,7 +233,7 @@ nav ul {
 }
 
 .btn-update-progress {
-  width: 11.5rem;
+  width: 15.5rem;
   height: 2.063rem;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
@@ -244,7 +245,6 @@ nav ul {
 .add-book-title {
   margin-top: 4.438rem;
   margin-bottom: 1rem;
-  font-family: Montserrat;
   font-size: 1.25rem;
   color: var(--gray-add-book);
 }
@@ -290,17 +290,11 @@ form {
   color: var(--pinkish-gray);
 }
 
-.book-category-select {
- 
-}
-
-
 .add-book-button {
-  width: 11.5rem;
+  width: 18.5rem;
   border-radius: 3px;
   background-color: var(--azure-title);
   height: 2.813rem;
-  font-family: RobotoSlab;
   font-size: 0.813rem;
   font-weight: bold;
   font-stretch: normal;
@@ -309,4 +303,9 @@ form {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+}
+
+hr {
+  margin-top: 4rem;
+  background-color: var(--gray-item-border);
 }

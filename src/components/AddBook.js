@@ -24,6 +24,7 @@ const AddBook = () => {
 
   return (
     <div className="form">
+      <hr />
       <h2 className="add-book-title">ADD NEW BOOK</h2>
 
       <form action="" onSubmit={sendBook}>
