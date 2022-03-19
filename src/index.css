@@ -1,4 +1,3 @@
-/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +22,6 @@ body {
 }
 
 .App {
-  /* padding-left: 6.25rem; */
   width: 75rem;
   margin-left: auto;
   margin-right: auto;
