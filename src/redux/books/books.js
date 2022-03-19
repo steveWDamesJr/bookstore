@@ -6,16 +6,6 @@ const initialState = [];
 
 const urlAPI = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/3hw8RYqnMx0YNQ7iHXRW/books';
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
-
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  id,
-});
-
 export const sentBookAPI = (payload) => (
   async (dispatch) => {
     await fetch(urlAPI, {
@@ -33,7 +23,10 @@ export const sentBookAPI = (payload) => (
         'application/JSON',
       },
     });
-    dispatch(addBook(payload));
+    dispatch({
+      type: ADD_BOOK,
+      payload,
+    });
   }
 );
 
@@ -50,7 +43,10 @@ export const deleteBook = (id) => (
       },
     });
     if (response.status === 201) {
-      dispatch(removeBook(id));
+      dispatch({
+        type: REMOVE_BOOK,
+        payload: id,
+      });
     }
   }
 );
@@ -71,7 +67,10 @@ export const getBook = async (dispatch) => {
       author: bookAuthor,
       category,
     };
-    dispatch(addBook(newBookEntry));
+    dispatch({
+      type: ADD_BOOK,
+      payload: newBookEntry,
+    });
   });
 };
 
@@ -82,7 +81,7 @@ const booksReducer = (state = initialState, action) => {
 
     case REMOVE_BOOK:
 
-      return state.filter((book) => book.id !== action.id);
+      return state.filter((book) => book.id !== action.payload);
 
     case GET_BOOKS_SUCCESS:
       return [...state, action.payload];
