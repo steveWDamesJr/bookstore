@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { sentBookAPI } from '../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const AddBook = () => {
 
   const sendBook = (e) => {
     e.preventDefault();
-    dispatch(addBook(book));
+    dispatch(sentBookAPI(book));
   };
 
   return (
