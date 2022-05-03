@@ -26,19 +26,21 @@ const BookItem = (props) => {
               <li className="actions">
                 <button type="button">Remove</button>
               </li>
-              <li className="actions">Edit</li>
+              <li className="actions edit">Edit</li>
             </ul>
           </div>
           <div className="c100 p34 center">
-            <span>64%</span>
             <div className="slice">
               <div className="bar" />
               <div className="fill" />
             </div>
           </div>
-          <div className="percent-complete-container">
-            <span className="percent-complete">64%</span>
-            <span className="completed text-style-2">Completed</span>
+          <div>
+            <CircularProgressbar value={percentage} text={`${percentage}%`} />
+          </div>
+          <div className="percent-container-completed">
+            <div className="completed text-style-2">Completed</div>
+            <div className="percent-complete">64%</div>
           </div>
           <div className="chapter-progress-container">
             <span className="current-chapter">Current Chapter</span>
@@ -49,6 +51,7 @@ const BookItem = (props) => {
             >
               UPDATE PROGRESS
             </button>
+
           </div>
         </li>
       </ul>
