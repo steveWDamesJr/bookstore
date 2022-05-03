@@ -148,3 +148,12 @@
   border-color: var(--azure-title);
   color: var(--white);
 }
+
+.status-btn {
+  background-color: var(--azure-title);
+  padding: 0.5rem 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--white);
+  font-weight: bold;
+}
