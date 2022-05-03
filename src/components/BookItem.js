@@ -35,9 +35,6 @@ const BookItem = (props) => {
               <div className="fill" />
             </div>
           </div>
-          <div>
-            <CircularProgressbar value={percentage} text={`${percentage}%`} />
-          </div>
           <div className="percent-container-completed">
             <div className="completed text-style-2">Completed</div>
             <div className="percent-complete">64%</div>
