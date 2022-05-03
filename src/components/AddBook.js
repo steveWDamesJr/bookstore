@@ -2,13 +2,15 @@ import { React } from 'react';
 
 function AddBook() {
   return (
-    <div>
-      <h2>ADD NEW BOOK</h2>
+    <div className="form">
+      <hr />
+      <h2 className="add-book-title">ADD NEW BOOK</h2>
 
       <form action="">
         <input type="text" placeholder="Book Title" />
         <input type="text" placeholder="Book Author" />
         <select
+          className="book-category-select"
           name="category"
           id="category"
         >
@@ -25,7 +27,7 @@ function AddBook() {
             Documentary
           </option>
         </select>
-        <button type="submit">Add Book</button>
+        <button className="add-book-button" type="submit">Add Book</button>
       </form>
     </div>
   );
