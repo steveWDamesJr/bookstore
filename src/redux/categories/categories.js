@@ -15,7 +15,7 @@ export function checkStatus() {
   return { type: CHECK_STATUS };
 }
 
-const categoriesReducer = (state = categoriesState, action) => {
+export const categoriesReducer = (state = categoriesState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return 'Under Construction';
@@ -27,5 +27,3 @@ const categoriesReducer = (state = categoriesState, action) => {
       return state;
   }
 };
-
-export default categoriesReducer;

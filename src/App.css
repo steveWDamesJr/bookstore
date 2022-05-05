@@ -247,3 +247,9 @@ nav ul {
   color: var(--white);
   font-weight: bold;
 }
+
+.check-status-text {
+  color: var(--azure-title);
+  background-color: var(--white);
+  padding: 1rem 4rem;
+}
