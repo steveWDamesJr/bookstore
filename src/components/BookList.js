@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 
-const BookList = () => {
-  const bookArr = useSelector((state) => state.booksReducer);
+function BookList() {
+  const bookArr = useSelector((state) => state.books);
 
   return (
-    <ul>
+    <div>
       {
         bookArr.map((bookItem) => (
           <BookItem
@@ -17,8 +17,8 @@ const BookList = () => {
           />
         ))
        }
-    </ul>
+    </div>
   );
-};
+}
 
 export default BookList;
