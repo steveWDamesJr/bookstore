@@ -31,8 +31,8 @@ function AddBook() {
       <h2 className="add-book-title">ADD NEW BOOK</h2>
 
       <form>
-        <input className="book-title-input" name="title" type="text" placeholder="Book Title" onChange={onChange} value={book.title ? book.title : ''} />
-        <input className="book-author-input" name="author" type="text" placeholder="Book Author" onChange={onChange} value={book.author ? book.author : ''} />
+        <input className="book-title-input" name="title" placeholder="Book Title" onChange={onChange} value={book.title ? book.title : ''} />
+        <input className="book-author-input" name="author" placeholder="Book Author" onChange={onChange} value={book.author ? book.author : ''} />
         <select
           className="book-category-select"
           name="category"

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import BookItem from './BookItem';
 import { getBooks } from '../redux/books/books';
+import AddBook from './AddBook';
 import BookStoreUtility from '../BookstoreAPI/apiUtility';
 
 function Books() {
@@ -27,14 +28,15 @@ function Books() {
     <div className="books_container">
       {bookList ? bookList.map((item) => (
         <BookItem
-          id={item.item_id}
           key={item.item_id}
+          id={item.item_id}
           author={item.author}
           title={item.title}
           category={item.category}
 
         />
       )) : <h1>No books in the store</h1>}
+      <AddBook />
     </div>
   );
 }
