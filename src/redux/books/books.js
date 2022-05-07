@@ -1,40 +1,34 @@
-export const booksState = [{
-  id: '1',
-  category: 'Adventure',
-  title: 'Warriors',
-  author: 'Erin Hunter',
-},
-{
-  id: '2',
-  category: 'Action',
-  title: 'The Good Soldier',
-  author: 'L. T. Ryan',
-},
-{
-  id: '3',
-  category: 'Self Help',
-  title: 'Cracking the Coding Interview',
-  author: 'Gayle Laakmann McDowell',
-}];
+import BookStoreUtility from '../../BookstoreAPI/apiUtility';
 
+export const booksState = [];
+
+const GET_BOOKS_SUCCESS = 'bookStore/books/GET_BOOKS_SUCCESS';
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-export function addBook(book) {
-  return { type: ADD_BOOK, book };
+export function getBooks(books) {
+  return { type: GET_BOOKS_SUCCESS, books };
 }
 
-export function removeBook(id) {
-  return { type: REMOVE_BOOK, id };
-}
+export const addBook = (book) => async (dispatch) => {
+  await BookStoreUtility.apiToAddBook(book);
+  dispatch({ type: ADD_BOOK, book });
+};
 
-export const booksReducer = (booksState = [], action) => {
+export const removeBook = (id) => async (dispatch) => {
+  await BookStoreUtility.apiToRemoveBook();
+  dispatch({ type: REMOVE_BOOK, id });
+};
+
+export const booksReducer = (state = booksState, action) => {
   switch (action.type) {
+    case GET_BOOKS_SUCCESS:
+      return action.books;
     case ADD_BOOK:
-      return [...booksState, action.book];
+      return [...state, action.book];
     case REMOVE_BOOK:
-      return [...booksState].filter((book) => book.id !== action.id);
+      return [...state].filter((book) => book.item_id !== action.id);
     default:
-      return booksState;
+      return state;
   }
 };

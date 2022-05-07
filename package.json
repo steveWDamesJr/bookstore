@@ -18,6 +18,7 @@
     "react-scripts": "5.0.0",
     "reactjs-dropdown-component": "^1.2.0",
     "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^4.0.0",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1",

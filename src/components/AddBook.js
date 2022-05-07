@@ -7,7 +7,7 @@ function AddBook() {
   const dispatch = useDispatch();
   const [book, setBook] = useState(
     {
-      id: uuid(),
+      item_id: uuid(),
     },
   );
 
@@ -18,10 +18,10 @@ function AddBook() {
     });
   };
 
-  const handleClick = () => {
+  const sendBook = () => {
     dispatch(addBook(book));
     setBook({
-      id: uuid(),
+      item_id: uuid(),
     });
   };
 
@@ -54,7 +54,7 @@ function AddBook() {
             Self help
           </option>
         </select>
-        <button className="add-book-button" type="button" onClick={handleClick}>Add Book</button>
+        <button className="add-book-button" type="button" onClick={sendBook}>Add Book</button>
       </form>
     </div>
   );
