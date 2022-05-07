@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
+
+const percentage = 64;
 
 function BookItem({ ...props }) {
   const {
@@ -41,6 +45,9 @@ function BookItem({ ...props }) {
               <div className="bar" />
               <div className="fill" />
             </div>
+          </div>
+          <div>
+            <CircularProgressbar value={percentage} text={`${percentage}%`} />
           </div>
           <div className="percent-complete-container">
             <span className="percent-complete">64%</span>
